@@ -16,5 +16,14 @@ setup(
     install_requires=[
         "pystache>=0.5.3"
     ],
-    packages=["django_mustache"],
+    packages=['django_mustache'],
+    package_dir={'django_mustache': 'django_mustache'},
+    include_package_data=True,
+    package_data={
+        'django_mustache': [
+            '*.py',
+            'template/*.py',
+            'template/loaders/*.py',
+            'tests/*.py']
+    }
 )
