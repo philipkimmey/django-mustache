@@ -1,4 +1,5 @@
 from setuptools import setup
+from setuptools import find_packages
 
 setup(
     name="django-mustache",
@@ -7,7 +8,6 @@ setup(
     author_email="philip.kimmey@gmail.com",
     description="Basic mustache support in Django templates",
     license="MIT",
-    platforms=["Any"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "License :: OSI Approved :: MIT License",
@@ -16,7 +16,6 @@ setup(
     install_requires=[
         "pystache>=0.5.3"
     ],
-    packages=['django_mustache'],
+    packages=find_packages(),
     package_dir={'django_mustache': 'django_mustache'},
-    include_package_data=True,
 )
